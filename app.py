@@ -33,14 +33,14 @@ init_db()
 def get_stock_data(symbol):
     df = yf.download(symbol, period="1y")
 
-# ✅ Fix MultiIndex Columns
+
     if isinstance(df.columns, pd.MultiIndex):
         df.columns = df.columns.get_level_values(0)
 
     df = df.reset_index()
 
     
-    # Clean and transform
+    
     df['Daily_Return'] = (df['Close'] - df['Open']) / df['Open']
     df['7Day_MA'] = df['Close'].rolling(window=7).mean()
     df['52Week_High'] = df['Close'].rolling(window=252).max()
@@ -93,7 +93,6 @@ def compare():
         s2: df2[['Date', 'Close']].to_dict(orient='records')
     })
 
-# --- Simple Frontend Dashboard (Bonus) ---
 @app.route('/')
 def index():
     return render_template("index.html")
