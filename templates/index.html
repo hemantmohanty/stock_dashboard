@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>📊 Stock Price Dashboard</h2>
+
+    <label>Select Company:</label>
+    <select id="companyDropdown"></select>
+    <button onclick="loadData()">Load Chart</button>
+
+    <canvas id="chart"></canvas>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

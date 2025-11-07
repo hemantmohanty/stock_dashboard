@@ -1,0 +1,6 @@
+Flask
+pandas
+numpy
+yfinance
+sqlite3-binary
+matplotlib

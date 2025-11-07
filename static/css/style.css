@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+label, select, button {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056c8;
+}
+
+canvas {
+  margin-top: 25px;
+  width: 100% !important;
+  height: 400px !important;
+}
